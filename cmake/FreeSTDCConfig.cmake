@@ -10,9 +10,9 @@ foreach(i ${CMAKE_SYSTEM_PREFIX_PATH})
 endforeach()
 
 foreach(i ${CMAKE_SYSTEM_PREFIX_PATH})
-	message(CHECK_START "Finding library of FreeSTDC: ${i}/freestdc/include")
+	message(CHECK_START "Finding library of FreeSTDC: ${i}/freestdc/lib/${CMAKE_SYSTEM_PROCESSOR}-${CMAKE_SYSTEM_NAME}")
 
-	find_library(FREESTDC_LINK_LIBRARIES NAMES freestdc HINTS "${i}/freestdc/lib")
+	find_library(FREESTDC_LINK_LIBRARIES NAMES freestdc HINTS "${i}/freestdc/lib/${CMAKE_SYSTEM_PROCESSOR}-${CMAKE_SYSTEM_NAME}")
 
 	if (FREESTDC_LINK_LIBRARIES)
 		message(CHECK_PASS "Found library of FreeSTDC: ${FREESTDC_LINK_LIBRARIES}")

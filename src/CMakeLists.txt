@@ -17,4 +17,4 @@ file(GLOB SRC *.c *.h *.asm *.s *.S)
 target_sources(freestdc PRIVATE ${SRC})
 
 add_subdirectory("common")
-install(TARGETS freestdc DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(TARGETS freestdc DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/${CMAKE_SYSTEM_PROCESSOR}-${CMAKE_SYSTEM_NAME})
