@@ -1,0 +1,6 @@
+#ifndef _FREESTDC_FREESTDC_H_
+#define _FREESTDC_FREESTDC_H_
+
+#define @PROJECT_NAME@_VERSION @PROJECT_VERSION@
+
+#endif
