@@ -16,6 +16,11 @@ target_include_directories(
 add_subdirectory(include)
 add_subdirectory(src)
 
+install(
+    TARGETS freestdc
+    EXPORT ${PROJECT_NAME}Targets
+    DESTINATION "lib/${PROJECT_NAME}/${CMAKE_SYSTEM_PROCESSOR}-${CMAKE_SYSTEM_NAME}")
+
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
 	${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake

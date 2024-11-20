@@ -17,7 +17,3 @@ file(GLOB SRC *.c *.h *.asm *.s *.S)
 target_sources(freestdc PRIVATE ${SRC})
 
 add_subdirectory("common")
-install(
-    TARGETS freestdc
-    EXPORT ${PROJECT_NAME}Targets
-    DESTINATION "lib/${PROJECT_NAME}/${CMAKE_SYSTEM_PROCESSOR}-${CMAKE_SYSTEM_NAME}")
